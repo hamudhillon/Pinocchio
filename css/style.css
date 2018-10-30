@@ -18,7 +18,7 @@ a{
 	position: absolute;
 	width: 100%;
 	height:100%;
-	background-image: url('../imgs/1.jpg');
+	background: url('../imgs/1.jpg');
 	background-size: cover;	
 	box-shadow: inset 700px 800px 100px rgba(0,0,0,.5);
 }
@@ -78,14 +78,14 @@ nav .nav{
 }
 .nav .search div:first-child::before{
 	content: '+';
-	font-family: FontAwwesom;
+	font-family: 'Font Awesome 5 Free';
 	color: white;
 	margin: 0 2px;
 	font-size: .8em;
 }	
 .nav .search div:first-child::after{
-	content: 'ss';
-	font-family: FontAwwesom;
+	content: '\f0c2';
+	font-family: "Font Awesome 5 Free";
 	color: white;
 	margin: 0 10px;
 }	
@@ -110,8 +110,8 @@ nav .nav{
 	outline: none;
 	color: white;
 }
-.nav .search .search-bar::before{
-	content: 'ss';
+.nav .search .fas{
+	
 	color: white;
 	padding: 10px;
 	position: relative;
@@ -124,6 +124,9 @@ nav .nav{
 	margin: 0 5% 0 15%;
 	height: cover;
 	box-sizing: border-box;
+}
+.n2,.n3{
+	display: none;
 }
 .news1{
 	position: relative;
@@ -145,10 +148,7 @@ nav .nav{
 	position: relative;
 	margin: 20px 0;
 }
-.news1 .full-story a::after{
-	content: '--->';
-	margin: 0 10px;
-}
+
 .news1 .full-story a{
 	font-size: .8em;
 	color: rgba(255,255,255,1);
@@ -183,25 +183,16 @@ nav .nav{
 	color: rgba(255,255,255,.5);
 	cursor: pointer;
 }
-.slide-controls .activeslide{
+.slide-controls .active{
 	display: flex;
 	margin: 0 10px;
 	line-height: 5px;
-	font-size: 2em;
+	font-size: 5em;
 	color: rgba(255,255,255,.5);
 	font-family: serif;
 	list-style: none;
 }
-.activeslide li:first-child{
-	color: white;
-}
-.activeslide li:hover{
-	color: white;
-}
-.slide-controls .pre:hover{
-	color: white;
-}
-.slide-controls .next:hover{
+.active li:first-child{
 	color: white;
 }
 .news1 .upcoming{
@@ -254,7 +245,6 @@ nav .nav{
 .main-content .sections .section-heading{
 	width: 100%;
 	height: 50px;
-
 	display: flex;
 	line-height: 50px;
 }
@@ -263,6 +253,7 @@ nav .nav{
 	font-family: cursive;
 	font-size: 1.4em;
 	text-transform: capitalize;
+	color: black;
 }
 
 .section-heading h1::before,.video-box h1::before{
@@ -299,14 +290,17 @@ nav .nav{
 	background-color: transparent!important;
 }
 .drop a::after{
+	content: '\f106';
+	font-family: 'Font Awesome 5 Free';
 	position: relative;
 	top: 0;
 	right: 0;
-	content: 's';
 	margin: 0 10px;
 }
 .drop:hover.drop a::after{
-	content: '1';
+	content: '\f107';
+	font-family: 'Font Awesome 5 Free';
+	position: relative;
 }
 .drop-menu a::after{
 	display: none;
@@ -501,7 +495,7 @@ nav .nav{
 	position: relative;
 	font-size: .8em;
 }
-.video-box .playlist .thumb-img{
+ .thumb-img{
 	position: relative;
 	width: 95px;
 	height: 95px;
@@ -515,15 +509,16 @@ nav .nav{
 	cursor: pointer;
 	color: #8d8d8d;
 }
-.video-box .playlist .video-src:first-child .thumb-img{
+.live{
 	border: 2px solid green;
 }
-.video-box .playlist .video-src:first-child .thumb-img img{
+.live img{
 	animation: gol 10s linear infinite;
 
 }
-.video-box .playlist .thumb-img::before{
-	content: 's';
+.thumb-img::before{
+	content: "\f04b";
+	font-family:'Font Awesome 5 Free';
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -536,8 +531,9 @@ nav .nav{
 	color: green;
 	transition: .2s;
 }
-.video-box .playlist .video-src:first-child .thumb-img::before{
-	content: 's';
+
+.live::before{
+	content: '\f04b';
 	position: absolute;
 	text-align: center;
 	line-height: 95px;
@@ -546,7 +542,7 @@ nav .nav{
 	width: 100%;
 	height: 100%;
 	border-radius: 100%;top: 0;left: 0;
-	background-color: rgba(0,0,0,0);
+	background: transparent;
 	z-index: 2;
 
 }
@@ -623,9 +619,7 @@ nav .nav{
 .activeslide li:first-child{
 	color: white;
 }
-.activeslide li:hover{
-	color: white;
-}
+
 .control .pre:hover{
 	color: white;
 }

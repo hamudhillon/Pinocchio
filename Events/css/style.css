@@ -72,7 +72,7 @@ nav .nav{
 	color: rgba(255,255,255,.5);
 	transition: .3s all;
 }
-.nav ul li:last-child a{
+.nav ul li:nth-child(3) a{
 	color: white;
 }
 .nav ul li a:hover{
@@ -99,8 +99,8 @@ nav .nav{
 	font-size: .8em;
 }	
 .nav .search div:first-child::after{
-	content: 'ss';
-	font-family: FontAwwesom;
+	content: '\f0c2';
+	font-family: "Font Awesome 5 Free";
 	color: white;
 	margin: 0 10px;
 }	
@@ -125,8 +125,7 @@ nav .nav{
 	outline: none;
 	color: white;
 }
-.nav .search .search-bar::before{
-	content: 'ss';
+.nav .search .fas{
 	color: white;
 	padding: 10px;
 	position: relative;
@@ -145,7 +144,7 @@ nav .nav{
 .heading h1{
 	position:absolute;
 	top: 50%;
-	left: 50%;
+	left: 50%;  	
 	font-size: 5em;
 	margin: 0;
 	padding: 0 20px;

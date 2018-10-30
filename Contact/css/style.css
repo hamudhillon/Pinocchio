@@ -98,8 +98,8 @@ nav .nav{
 	font-size: .8em;
 }	
 .nav .search div:first-child::after{
-	content: 'ss';
-	font-family: FontAwwesom;
+	content: '\f0c2';
+	font-family: "Font Awesome 5 Free";
 	color: white;
 	margin: 0 10px;
 }	
@@ -124,8 +124,7 @@ nav .nav{
 	outline: none;
 	color: white;
 }
-.nav .search .search-bar::before{
-	content: 'ss';
+.nav .search .fab{
 	color: white;
 	padding: 10px;
 	position: relative;
