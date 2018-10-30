@@ -1,0 +1,372 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+a{
+	text-decoration: none;
+	color: #ffff;
+}
+
+.main-slidebox{
+	position: absolute;
+	width: 100%;
+	height:50%;
+	background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,
+		#00ff00,#ffff00,#ff0000);
+	background-size: 400%;
+	box-shadow: inset 00px 1000px 1000px rgba(0,0,0,.5);
+	animation: ani 20s linear infinite;
+	filter: blur(2000px);
+	z-index: -1;
+
+}
+@keyframes ani{
+	0%{
+		background-position: 0 0;
+	}
+		50%{
+		background-position: 300% 0;
+	}
+		100%{
+		background-position: 0 0;
+	}
+}
+nav{
+	width: 100%;
+	position: fixed;
+	height: 100px;
+	background: rgba(0,0,0,0);
+	box-sizing: border-box;
+	z-index: 900;
+}
+nav .nav{
+	width: 70%;
+	position: relative;
+	height: 50px;
+	margin: 0 auto;
+	display: flex;
+	line-height: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	/*padding: 25px 0;*/
+}
+.nav .title{
+	margin-right: 40px;
+	color: white;
+}
+.nav ul{
+	display: flex;
+	list-style: none;
+}
+.nav ul li{
+	margin: 0 20px;
+}
+.nav ul li a{
+	color: rgba(255,255,255,.5);
+	transition: .3s all;
+}
+.nav ul li:last-child a{
+	color: white;
+}
+.nav ul li a:hover{
+	color: white;
+}
+.nav .search{
+	position: relative;
+	display: flex;
+	left: 250px;
+	
+}
+.nav .search div:first-child{
+	margin: 0 10px;
+	font-family: serif;
+	color: white;
+	font-weight: 600;
+	text-shadow: 1px 1px 2px grey;
+}
+.nav .search div:first-child::before{
+	content: '+';
+	font-family: FontAwwesom;
+	color: white;
+	margin: 0 2px;
+	font-size: .8em;
+}	
+.nav .search div:first-child::after{
+	content: 'ss';
+	font-family: FontAwwesom;
+	color: white;
+	margin: 0 10px;
+}	
+.nav .search .search-bar{
+	position: relative;
+	/*top: 20px;*/
+	width: 200px;
+	/*height: 30px;*/
+	background:rgba(355,355,355,.4);
+	border-radius: 5px;
+	outline: none;
+	padding: 0 20px 5px 20px;
+	color: white;
+	top: 5px;
+	height: 45px;
+}
+.search-bar input{
+	/*height: 0px;*/
+	width: 80%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: white;
+}
+.nav .search .search-bar::before{
+	content: 'ss';
+	color: white;
+	padding: 10px;
+	position: relative;
+	color: rgba(255,255,255,.6);
+}
+
+.heading
+{
+	position: relative;
+	width: 60%;
+	height: 400px;
+	margin: 0 auto;
+	/*text-align: center;*/
+	/*line-height: 400px;	*/
+}
+.heading h1{
+	position: relative;
+	top: 50%;
+	left:50%;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	border-radius: 50px;
+	background-color: rgba(400,400,400,.4);
+	font-size: 3em;
+	color: white;
+	text-shadow: 2px 2px 2px grey;
+	letter-spacing: 5px;
+	transform: translate(-50%,-50%);
+}
+.main-box{
+	height: auto;
+	width: 80%;
+	position: relative;
+	margin: 0 auto;
+}
+.contact-form{
+	background-color: rgba(400,400,400,.7);
+	float: left;
+	width: 70%;
+	border-top-left-radius:20px;
+	position: relative;
+	height: 500px;
+	margin-top: 100px;
+	padding: 50px 20px;
+	box-sizing: border-box;
+	border: 2px solid #eee;
+	/*border-right: 1px solid #eee;*/
+}
+.contact-form input,textarea{
+	background-color: #f7f7f7;
+	border: 1px solid #eee;
+}
+.contact-form input:nth-child(1),input:nth-child(2){
+	width: 45%;
+	margin-right: 20px;
+	height: 40px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+.contact-form input:nth-child(3){
+	width: 93%;
+	height: 40px;
+	margin-bottom: 20px;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.contact-form textarea{
+	width: 93%;
+	height: 200px;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+
+}
+.contact-form button{
+	width: 93%;
+	height: 45px;
+	background: #ee002d;
+	border: none;
+	color: white;
+	box-sizing: border-box;
+	font-size: 1em;
+	font-family: cursive;
+	cursor: pointer;
+	transition: .5s;
+}
+.contact-form button:hover{
+	background-color: seagreen;
+}
+.info{
+	border-top-right-radius:20px;
+	height: 500px;
+	background-color: rgba(400,400,400,.7);
+	margin-top: 100px;
+	width: 30%;
+	float: left;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	border: 1px solid #eee;
+}
+.info .box1{
+	height: 100px;
+}
+.info .box1 h4{
+	color: #ee002d;
+	font-family: cursive;
+	margin: 10px 0;
+	font-size: 1em;
+	border-bottom: 2px solid;
+}
+.info .box1:nth-child(1) h4{
+	width: 70px;
+	padding: 2px 0;
+}
+.info .box1:nth-child(2) h4{
+	width: 45px;
+	padding: 2px 0;
+}
+.info .box1:nth-child(3) h4{
+	width: 40px;
+	padding: 2px 0;
+}
+.info .box1 p{
+	font-size: .8em;
+	margin: 0 5px;
+	line-height: 20px;
+	color: grey;
+	font-family: cursive;
+}
+.footer{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background-color:#1f1f1f;
+	/*top: 200px;*/
+}
+
+.footer .leftside{
+	text-align: center;
+	width: 70%;
+	float: left;
+	height: 100%;
+	box-sizing: border-box;
+}
+.footer .upper{
+	height: 80%;
+	color: white;
+	box-sizing: border-box;
+}
+.footer .upper h1{
+	margin-top: 20px;
+	box-sizing: border-box;
+}
+.footer .upper ul{
+	width: 25%;
+	position: relative;
+	list-style: none; 
+	display: flex;
+	margin: 10px auto 0 auto;
+	box-sizing: border-box;
+}
+.footer .upper li{
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
+	border-radius: 100%;
+	transition: .3s all;
+	line-height: 30px;
+	box-sizing: border-box;
+
+	border: 1px solid #1f1f1f;
+}
+.footer .upper li a{
+	font-size: 1.5em;
+	/*margin: 0 20px;*/
+	transition: .3s all;
+	color: rgba(200,200,200,.8);
+}
+.footer .upper li:hover a{
+	color: white;
+}
+.footer .upper li:hover{
+	font-size: .6em;
+	transform: scale(1.2,1.2);
+	/*border: 1px solid rgba(200,200,200,.8);*/
+	box-shadow: inset 0 0 10px rgba(0,0,0,.7);
+}
+.footer .lower{
+
+	position: relative;
+	font-size: .7em;
+	color: rgba(200,200,200,.5);
+	letter-spacing: 2px;
+}
+.footer .subscribe{
+	float: left;
+	width: 24%;
+	height: 100%;
+	background: black;
+	margin-left: 15px;
+	color: white;
+	padding: 40px 20px;
+	box-sizing: border-box;
+}
+.footer .subscribe h3{
+	margin: 10px 0;
+	font-weight: 100;
+	letter-spacing: 2px;
+	font-family: cursive;
+	width: 20px;
+	border-bottom: 2px solid white;
+	transition: 1s;
+}
+.footer .subscribe:hover h3{
+	width: 100px;
+	border-color: seagreen;
+}
+.footer .subscribe .email{
+	margin-top: 20px;
+	width: 200px;
+	border-bottom: 1px solid grey;
+	height: 30px;
+}
+.email input{
+
+	height: 30px;
+	background: transparent;
+	outline: none;
+	border: none;
+	width: 160px;
+	color: white;
+	font-size: .8em;
+}
+.email button{
+	height: 25px;
+	width: 40px;
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	color: seagreen;
+}
